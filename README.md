@@ -1,2 +1,2 @@
 # Coding-In-C
-C-Programming Mastery
+C-Programming Day-to-Day Practice to achieve Mastery
