@@ -1,0 +1,35 @@
+/*
+Q42 (Loops without Arrays/Strings)
+Write a program to check if a number is a perfect number.
+
+Show Sample Test Cases
+Input 1:
+6
+Output 1:
+Perfect number
+Input 2:
+10
+Output 2:
+Not perfect number
+*/
+
+#include <stdio.h>
+
+int main() {
+    int n, i, sum = 0;
+
+    scanf("%d", &n);
+
+    for (i = 1; i <= n/2; i++) {   // proper divisors go only up to n/2
+        if (n % i == 0) {
+            sum += i;
+        }
+    }
+
+    if (sum == n)
+        printf("Perfect number");
+    else
+        printf("Not perfect number");
+
+    return 0;
+}

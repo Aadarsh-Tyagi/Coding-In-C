@@ -1,0 +1,47 @@
+/*
+Q54 (Nested Loops without Arrays/Strings)
+Write a program to print the following pattern:
+
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+   
+Show Sample Test Cases
+Input 1:
+Output 1:
+Pattern with layers of stars as shown.
+*/
+
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    // Upper part of diamond
+    for (i = 1; i <= 4; i++) {
+        for (j = 1; j <= 4 - i; j++) {
+            printf(" ");           // Print spaces
+        }
+        for (j = 1; j <= (2 * i - 1); j++) {
+            printf("*");           // Print stars
+        }
+        printf("\n");
+    }
+
+    // Lower part of diamond
+    for (i = 3; i >= 1; i--) {
+        for (j = 1; j <= 4 - i; j++) {
+            printf(" ");           // Print spaces
+        }
+        for (j = 1; j <= (2 * i - 1); j++) {
+            printf("*");           // Print stars
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
